@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@400;700&display=swap');
+
+/* Normalize CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Normalize CSS End */
+
+/* Default Preset */
+body {
+  height: 100vh;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  font-family: 'DM Sans', sans-serif;
+  color: #2C3333;
+}
+
+h1,
+h2 {
+  font-family: 'Syne';
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Default Preset End */
+
+/* Landing */
+.landing {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(rgba(124, 18, 185, 0.368),
+      rgb(18, 4, 19)), url('/src/img/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing h1 {
+  font-size: 64px;
+}
+
+.landing p {
+  font-size: 32px;
+}
+
+.landing-text {
+  margin-bottom: 4em;
+}
+
+/* Landing End */
+
+/* Content */
+.content {
+  background-color: rgb(248, 233, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 8em;
+  width: 100%;
+  gap: 2em;
+}
+
+.content>div {
+  width: 80%;
+}
+
+/* Content End */
+
+/* Footer Start */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(35, 5, 52);
+  color: white;
+  padding: .6em;
+}
+
+/* Footer End */
+
+/* Global Components */
+.card {
+  min-width: 300px;
+  width: 80%;
+  padding: 2em 4em;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card>h2 {
+  margin-bottom: .2em;
+}
+
+@media (max-width: 768px) {
+  .card {
+    text-align: center;
+  }
+}
