@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import AppBar from "../../components/app-bar.js";
 import SearchBar from "../../components/search-bar.js";
 import ResultList from "../../components/result-list.js";

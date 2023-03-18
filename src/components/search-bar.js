@@ -2,20 +2,20 @@ class SearchBar extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
-  };
+  }
 
   connectedCallback() {
     this.render();
-  };
+  }
 
   get value() {
     return this._shadowRoot.querySelector('#searchInput').value;
-  };
+  }
 
   set clickEvent(event) {
     this._clickEvent = event;
     this.render();
-  };
+  }
 
   render() {
     this._shadowRoot.innerHTML = `
@@ -73,7 +73,7 @@ class SearchBar extends HTMLElement {
     <button id="searchBtn">Search</button>
     `
     this._shadowRoot.querySelector('#searchBtn').addEventListener('click', this._clickEvent);
-  };
+  }
 }
 
 customElements.define('search-bar', SearchBar);

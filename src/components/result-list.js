@@ -1,10 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import ResultItem from "./result-item";
 
 class ResultList extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
-  };
+  }
 
   set results(data) {
     this._results = data;
@@ -13,7 +14,7 @@ class ResultList extends HTMLElement {
     } else {
       this.renderError('No games found');
     }
-  };
+  }
 
   render() {
     this._shadowRoot.innerHTML = `
@@ -32,11 +33,11 @@ class ResultList extends HTMLElement {
       resultItem.gameData = result;
       this._shadowRoot.appendChild(resultItem);
     });
-  };
+  }
 
   renderError(message) {
     this._shadowRoot.innerHTML = `Sorry, ${message}`;
-  };
+  }
 }
 
 customElements.define('result-list', ResultList);
