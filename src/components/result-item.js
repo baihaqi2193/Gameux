@@ -5,11 +5,11 @@ class ResultItem extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
-  };
+  }
 
   connectedCallback() {
     this.render();
-  };
+  }
 
   set gameData(data) {
     this.gameName = data.name;
@@ -19,13 +19,13 @@ class ResultItem extends HTMLElement {
     this.gamePlatforms = data.platforms.map((e) => {
       return e.abbreviation;
     }).join(', ');
-  };
+  }
 
   async getGameDetails(gameId) {
     const req = await DataHandler.getGameDetails(gameId);
     const res = req[0];
     renderModal(res);
-  };
+  }
 
   render() {
     this._shadowRoot.innerHTML = `
@@ -97,7 +97,7 @@ class ResultItem extends HTMLElement {
       this.getGameDetails(this.gameId);
     });
 
-  };
+  }
 }
 
 customElements.define('result-item', ResultItem);

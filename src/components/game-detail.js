@@ -1,7 +1,7 @@
 class GameDetail extends HTMLElement {
   connectedCallback() {
     this.render()
-  };
+  }
 
   set gameData(data) {
     this.gameName = data.name;
@@ -16,7 +16,7 @@ class GameDetail extends HTMLElement {
     this.gameSummary = data.summary;
     this.gameUrl = data.url;
     this.gameRating = isNaN(data.aggregated_rating) ? '😓 Rating Not Available' : `🔥 ${Math.round(data.aggregated_rating)}`;
-  };
+  }
 
   render() {
     this.innerHTML = `
@@ -156,7 +156,7 @@ class GameDetail extends HTMLElement {
     document.querySelector('#modalCloseBtn').addEventListener('click', () => {
       document.querySelector('game-detail').remove()
     });
-  };
+  }
 }
 
 customElements.define('game-detail', GameDetail);
